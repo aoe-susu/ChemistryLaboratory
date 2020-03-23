@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: bfb3410480809cd46b8a27ad2ea46a1e
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - SignPrefabs: {fileID: 1397455783346066, guid: a5f8b74e94191b64ca15c4a6b90e2ece,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
