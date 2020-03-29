@@ -14,11 +14,12 @@ namespace CLEditor
         public GameObject SignPrefabs;
         public Camera MainCamera;
         //已放置的物体列表
-        public List<SceneObject> SceneObjects = new List<SceneObject>();
+
 
         private ObjectPlaceStateControl slelctedobj;
+        private List<SceneObject> SceneObjects = new List<SceneObject>();
 
-       
+
         // Use this for initialization
         void Start()
         {
