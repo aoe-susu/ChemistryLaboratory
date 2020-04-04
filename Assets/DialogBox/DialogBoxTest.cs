@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using DialogBox;
 using UnityEngine;
 
-public class test : MonoBehaviour {
+public class DialogBoxTest : MonoBehaviour {
 
 	// Use this for initialization
 	public void messagetest () {
