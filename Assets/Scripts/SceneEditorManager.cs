@@ -23,8 +23,8 @@ namespace CLEditor
         // Use this for initialization
         void Start()
         {
-            ObjectNameTree.TextContentTree = ResourceLoad.resourceLoad.GetCL_ObjectNames();
-            ObjectNameTree.SelectEvent = SelectObject;
+            //ObjectNameTree.TextContentTree = ResourceLoad.resourceLoad.GetCL_ObjectNames();
+            //ObjectNameTree.SelectEvent = SelectObject;
         }
 
         // Update is called once per frame
