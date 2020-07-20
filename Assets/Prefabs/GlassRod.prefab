@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4260634970743216}
   - component: {fileID: 54567939964311892}
   - component: {fileID: 136867353158038838}
+  - component: {fileID: 114929663959731426}
   m_Layer: 0
   m_Name: GlassRod
   m_TagString: Untagged
@@ -126,8 +127,21 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!114 &114929663959731426
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1488504095768522}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790819af79a316948a84d60a48b7d3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clobjname: 
+  resourceLoad: {fileID: 0}
 --- !u!136 &136867353158038838
 CapsuleCollider:
   m_ObjectHideFlags: 1
@@ -135,7 +149,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1488504095768522}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.005
   m_Height: 0.2

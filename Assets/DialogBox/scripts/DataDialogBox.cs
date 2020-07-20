@@ -20,6 +20,10 @@ namespace DialogBox
             if (ConfirmEvent != null) ConfirmEvent(data);
             Destroy(this.gameObject);
         }
+        public void SetValue(DialogBoxDataBase dataBase)
+        {
+            Value.text = dataBase.GetDialogBoxShowString();
+        }
         public void Cancel()
         {
             if (CancelEvent != null) CancelEvent();

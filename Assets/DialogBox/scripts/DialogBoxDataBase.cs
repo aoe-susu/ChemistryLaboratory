@@ -13,6 +13,12 @@ namespace DialogBox {
         {          
             
         }
+
+        public virtual object GetValue()
+        {
+            return null;
+        }
+
     }
 
    

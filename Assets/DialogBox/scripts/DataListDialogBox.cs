@@ -56,7 +56,7 @@ namespace DialogBox
         }
 
         public void Add() {
-            DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", Name.text, TotalDatas, index =>
+            DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", Name.text,0, TotalDatas, index =>
             {
                 DialogBoxDataBase adddata = TotalDatas[index];
 
@@ -78,7 +78,9 @@ namespace DialogBox
 
         public void Edit()
         {
-            DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", Name.text, TotalDatas, index =>
+            var database = Options[selectedindex];
+            int defaultindex = TotalDatas.IndexOf(database);
+            DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", Name.text, defaultindex, TotalDatas, index =>
             {
                 DialogBoxDataBase editdata = TotalDatas[index];
                 if (selectedindex == -1) return;

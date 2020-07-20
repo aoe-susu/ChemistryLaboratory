@@ -21,6 +21,8 @@ GameObject:
   - component: {fileID: 4113993789682850}
   - component: {fileID: 33309337708348510}
   - component: {fileID: 23166281247294644}
+  - component: {fileID: 114014294575438540}
+  - component: {fileID: 114998400134786198}
   m_Layer: 0
   m_Name: solution_2
   m_TagString: Untagged
@@ -38,8 +40,9 @@ GameObject:
   - component: {fileID: 4894139315107898}
   - component: {fileID: 33256676648427986}
   - component: {fileID: 23144296713502342}
-  - component: {fileID: 64482488946378178}
   - component: {fileID: 54330848164542376}
+  - component: {fileID: 114084616279751938}
+  - component: {fileID: 64030838474379954}
   m_Layer: 0
   m_Name: Beaker
   m_TagString: Untagged
@@ -66,8 +69,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316644470251876}
-  m_LocalRotation: {x: -0.000000021855694, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0, z: -0.34800005}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4113993789682850}
@@ -122,7 +125,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100002, guid: 77d1248882b192449aba4bc454d15f8f, type: 3}
+  - {fileID: 2100000, guid: 89421543e63fd3641a6471ffd53cc026, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -169,19 +172,75 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 1
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 116
   m_CollisionDetection: 0
---- !u!64 &64482488946378178
+--- !u!64 &64030838474379954
 MeshCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1316644470251876}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: 77d1248882b192449aba4bc454d15f8f, type: 3}
+--- !u!114 &114014294575438540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167214865901622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56ec815a4a264df488dfd0362964bc36, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PourWaterEffective: {fileID: 1938285111005730, guid: a596860f2fcf83e4e8d1363474636a07,
+    type: 2}
+--- !u!114 &114084616279751938
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1316644470251876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 790819af79a316948a84d60a48b7d3d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cl_object:
+    Name: 
+    Model: 0
+    ModelSize: 1
+    Operations: []
+    Type: 0
+    Liquidvolume: 0
+    LiquidTemperature: 20
+    LiquidColor:
+      serializedVersion: 2
+      rgba: 16777215
+--- !u!114 &114998400134786198
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167214865901622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23c24233284088e43ab2c229cbb247a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HR:
+  - {x: 0.001, y: 0.045}
+  - {x: 0.002, y: 0.045}
+  - {x: 0.129, y: 0.045}
+  - {x: 0.13, y: 0.045}
+  vectexcount_everyheight: 36
+  material: {fileID: 2100000, guid: 89421543e63fd3641a6471ffd53cc026, type: 2}
+  filter: {fileID: 33309337708348510}
+  renderer: {fileID: 23166281247294644}
+  isReady: 0

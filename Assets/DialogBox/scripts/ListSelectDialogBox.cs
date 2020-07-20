@@ -14,13 +14,17 @@ namespace DialogBox
         public UnityAction CancelEvent;
         // Use this for initialization
 
-        public void SetOption(List<DialogBoxDataBase> opts) {
+        public void SetOption(List<DialogBoxDataBase> opts,int defaultval=-1) {
             Options.ClearOptions();
             foreach (var t in opts) {
                 Options.options.Add(new Dropdown.OptionData(t.GetDialogBoxShowString()));
             }
             if (opts.Count > 0)
-                Options.captionText.text = opts[0].GetDialogBoxShowString();
+            {
+                Options.value = defaultval;
+                Options.RefreshShownValue();
+                //Options.captionText.text = opts[0].GetDialogBoxShowString();
+            }
         }
 
         public void Confirm()

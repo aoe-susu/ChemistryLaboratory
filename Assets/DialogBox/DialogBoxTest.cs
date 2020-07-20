@@ -17,7 +17,7 @@ public class DialogBoxTest : MonoBehaviour {
     }
     public void datatest()
     {
-        DialogBoxManager.dialogBoxManager.EditData("编辑值-浮点数","测试名称",new Data(),data=> {
+        DialogBoxManager.dialogBoxManager.EditData("编辑值-浮点数","测试名称", new Data(),data=> {
             Debug.Log(data.GetDialogBoxShowString());
         });
     }
@@ -27,7 +27,7 @@ public class DialogBoxTest : MonoBehaviour {
         for (int i = 0; i < 10; i++) {
             datas.Add(new Data { data = 100 + i });
         }
-        DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", "数据列表", datas,index=> {
+        DialogBoxManager.dialogBoxManager.ListSelect("选择值-整数索引", "数据列表",0, datas,index=> {
             Debug.Log("返回索引" + index);
         });
     }
@@ -39,7 +39,7 @@ public class DialogBoxTest : MonoBehaviour {
         {
             datas.Add(new person {name ="susu" +i });
         }
-        DialogBoxManager.dialogBoxManager.EditDataList("编辑值-人物列表", "人物", datas, list => {
+        DialogBoxManager.dialogBoxManager.EditDataList("编辑值-人物列表", "人物",datas, datas, list => {
             foreach (var t in list) {
                 Debug.Log(t.GetDialogBoxShowString());
             }

@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 56ec815a4a264df488dfd0362964bc36
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - PourWaterEffective: {fileID: 1938285111005730, guid: a596860f2fcf83e4e8d1363474636a07,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

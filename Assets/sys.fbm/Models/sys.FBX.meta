@@ -1,9 +1,7 @@
 fileFormatVersion: 2
 guid: d4101ee946eb090498df19b2effa328f
-timeCreated: 1562211508
-licenseType: Pro
 ModelImporter:
-  serializedVersion: 21
+  serializedVersion: 23
   fileIDToRecycleName:
     100000: BLM
     100002: BLM01
@@ -73,10 +71,73 @@ ModelImporter:
     4300022: "\u5BF9\u8C61001"
     4300024: pz
     9500000: //RootNode
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 12 - Default
+    second: {fileID: 2100000, guid: d70787eb8bd5b5a419970294c787d6be, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #296'
+    second: {fileID: 2100000, guid: 0b0dd6e457e411444b71bf930f0f86e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #297'
+    second: {fileID: 2100000, guid: 0b0dd6e457e411444b71bf930f0f86e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'Material #298'
+    second: {fileID: 2100000, guid: 0b0dd6e457e411444b71bf930f0f86e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_001
+    second: {fileID: 2100000, guid: 2ac7a4009aa828841b96e78b4a9963dc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_07 - Default
+    second: {fileID: 2100000, guid: b84929cb1cfc8ff4eab16f3187b84edc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_Mat3d66-594165-45-174
+    second: {fileID: 2100000, guid: 4066c85d49546214a8aee966a3f20cb7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_Mat3d66-594165-53-229
+    second: {fileID: 2100000, guid: a37bb0e880ce7e3428a637cbd7547303, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: baked_Mat3d66-594165-54-156
+    second: {fileID: 2100000, guid: 691e02b524885974396b9303abf42de7, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'baked_Material #100'
+    second: {fileID: 2100000, guid: ca936192505f3f346b9ae15d393f4375, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'baked_Material #112'
+    second: {fileID: 2100000, guid: 0a444da121ece024ea2c33428be4750d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: 'baked_Material #295'
+    second: {fileID: 2100000, guid: ed655470f152df84199de05e88640476, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
     materialSearch: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -89,6 +150,8 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
@@ -103,6 +166,7 @@ ModelImporter:
     globalScale: 1
     meshCompression: 0
     addColliders: 0
+    useSRGBMaterialColor: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -113,16 +177,23 @@ ModelImporter:
     optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
+    previousCalculatedGlobalScale: 0.001
+    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
     tangentImportMode: 3
     normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -137,7 +208,6 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
-    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1

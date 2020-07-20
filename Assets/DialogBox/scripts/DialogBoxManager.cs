@@ -13,7 +13,8 @@ namespace DialogBox {
         public GameObject DataDialogBoxTemplate;
         public GameObject DataListDialogBoxTemplate;
         public GameObject ListSelectDialogBoxTemplate;
-
+        public GameObject ColorEditorDialogBoxTemplate;
+        public GameObject EventDataEditorDialogBoxTemplate;
         public void ShowMessage(string title,string content, UnityAction confirm=null) {
             var msgbox=Instantiate(MessageDialogBoxTemplate, transform).GetComponent<MessageDialogBox>();
             msgbox.Title.text = title;
@@ -30,18 +31,19 @@ namespace DialogBox {
             cfmbox.CancelEvent = cancel;
             cfmbox.gameObject.SetActive(true);
         }
-        public void EditData(string title,string name, DialogBoxDataBase resdata, UnityAction<DialogBoxDataBase> confirm, UnityAction cancel = null)
+        public void EditData(string title,string name, DialogBoxDataBase defaultval, UnityAction<DialogBoxDataBase> confirm, UnityAction cancel = null)
         {
             var databox = Instantiate(DataDialogBoxTemplate, transform).GetComponent<DataDialogBox>();
             databox.Title.text = title;
             databox.Name.text = name;
+            databox.SetValue(defaultval);
             databox.ConfirmEvent = confirm;
             databox.CancelEvent = cancel;
-            databox.dataBase = resdata;
+            databox.dataBase = defaultval;
             databox.gameObject.SetActive(true);
 
         }
-        public void EditDataList(string title,string name, List<DialogBoxDataBase> totaldatas, UnityAction<List<DialogBoxDataBase>> confirm, UnityAction cancel = null)
+        public void EditDataList(string title,string name, List<DialogBoxDataBase> defaultdatas, List<DialogBoxDataBase> totaldatas, UnityAction<List<DialogBoxDataBase>> confirm, UnityAction cancel = null)
         {
             var datalistbox = Instantiate(DataListDialogBoxTemplate, transform).GetComponent<DataListDialogBox>();
             datalistbox.Title.text = title;
@@ -49,20 +51,51 @@ namespace DialogBox {
             datalistbox.ConfirmEvent = confirm;
             datalistbox.CancelEvent = cancel;
             datalistbox.TotalDatas = totaldatas;
+            datalistbox.SetOptions(defaultdatas);
             datalistbox.gameObject.SetActive(true);
         }
-        public void ListSelect(string title,string name, List<DialogBoxDataBase> opts, UnityAction<int> confirm, UnityAction cancel = null)
+        public void ListSelect(string title,string name,int defaultval, List<DialogBoxDataBase> opts, UnityAction<int> confirm, UnityAction cancel = null)
         {
             var listselectbox = Instantiate(ListSelectDialogBoxTemplate, transform).GetComponent<ListSelectDialogBox>();
             listselectbox.Title.text = title;
             listselectbox.Name.text = name;
-            listselectbox.SetOption(opts);
+            listselectbox.SetOption(opts,defaultval);
             listselectbox.ConfirmEvent = confirm;
             listselectbox.CancelEvent = cancel;
             listselectbox.gameObject.SetActive(true);
         }
 
-        private void Start()
+        public void EditColor(string title, string name, Color32 defaultval, UnityAction<Color32> confirm, UnityAction cancel = null)
+        {
+            var databox = Instantiate(ColorEditorDialogBoxTemplate, transform).GetComponent<ColorEditorDialogBox>();
+            databox.Title.text = title;
+            databox.Name.text = name;
+            databox.SetValue(defaultval);
+            databox.ConfirmEvent = confirm;
+            databox.CancelEvent = cancel;
+            databox.gameObject.SetActive(true);
+        }
+
+        public void EditConditionData(ResourceLoad resourceLoad, CLCondition condition, UnityAction<object> confirm, UnityAction cancel = null)
+        {
+            var databox = Instantiate(EventDataEditorDialogBoxTemplate, transform).GetComponent<EventDataDialogBox>();
+            databox.resourceLoad = resourceLoad;
+            databox.SetEventData(condition);
+            databox.ConfirmEvent = confirm;
+            databox.CancelEvent = cancel;
+            databox.gameObject.SetActive(true);
+        }
+        public void EditCLValueData(ResourceLoad resourceLoad, CLValue clvalue, UnityAction<object> confirm, UnityAction cancel = null)
+        {
+            var databox = Instantiate(EventDataEditorDialogBoxTemplate, transform).GetComponent<EventDataDialogBox>();
+            databox.resourceLoad = resourceLoad;
+            databox.SetEventData(clvalue);
+            databox.ConfirmEvent = confirm;
+            databox.CancelEvent = cancel;
+            databox.gameObject.SetActive(true);
+        }
+
+        private void Awake()
         {
             if (dialogBoxManager == null)
                 dialogBoxManager = this;
